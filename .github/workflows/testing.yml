@@ -88,5 +88,9 @@ jobs:
               shell: bash
               run: |
                   sfdx auth:jwt:grant --instanceurl https://login.salesforce.com --clientid 3MVG9n_HvETGhr3BaZdVEARq2E0Xdcs8WOzo8yLqeYnz8iYmUpUpTd5fBSeuRW98PTnRpXZVu4GifIbeAu98D --jwtkeyfile assets/server.key --username vaibhav.srivastavaknp-gha1@force.com --setalias TEST
-
-            
+                  sfdx auth:jwt:grant --instanceurl https://login.salesforce.com --clientid 3MVG9n_HvETGhr3BxaUyKW0eA.LmfJN4mFPqjXeQFtQbda7DajbisyQcOV3B2hoXTVPekHwtyOMw6UcH2nQjb --jwtkeyfile assets/server.key --username hvbhardwaj@sexy.com --setalias DEV
+            - name: 'Retrieve package and deploy package'
+              shell: bash
+              run: |
+                  sfdx force:mdapi:retrieve -k manifest/package.xml -s -r . -u DEV
+                  sfdx force:mdapi:deploy -f unpackaged.zip -w 10 -u TEST
