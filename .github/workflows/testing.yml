@@ -87,6 +87,6 @@ jobs:
             - name: 'Populate auth file with SFDX_URL secret of integration org'
               shell: bash
               run: |
-                  sfdx auth:jwt:grant --instanceurl https://login.salesforce.com --clientid 3MVG9n_HvETGhr3BaZdVEARq2E0Xdcs8WOzo8yLqeYnz8iYmUpUpTd5fBSeuRW98PTnRpXZVu4GifIbeAu98D --jwtkeyfile assets\server.key --username vaibhav.srivastavaknp-gha1@force.com --setalias TEST
+                  sfdx auth:jwt:grant --instanceurl https://login.salesforce.com --clientid 3MVG9n_HvETGhr3BaZdVEARq2E0Xdcs8WOzo8yLqeYnz8iYmUpUpTd5fBSeuRW98PTnRpXZVu4GifIbeAu98D --jwtkeyfile assets/server.key --username vaibhav.srivastavaknp-gha1@force.com --setalias TEST
 
             
